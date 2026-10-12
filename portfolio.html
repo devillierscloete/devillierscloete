@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio — Devilliers Cloete</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <a href="index.html" class="logo">DC</a>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="portfolio.html" class="active">Portfolio</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+  <span class="mono status">Available for select projects</span>
+  <button class="burger" aria-label="Menu">Menu</button>
+</header>
+
+<div class="page-head section">
+  <div class="eyebrow mono"><span>01</span><span>Portfolio</span></div>
+  <h1 class="display">Selected <em>work.</em></h1>
+</div>
+
+<div class="filters">
+  <button class="on" data-filter="all">All</button>
+  <button data-filter="environment">Environment Art</button>
+  <button data-filter="visdev">Visual Development</button>
+  <button data-filter="design">Game Design</button>
+  <button data-filter="3d">3D</button>
+</div>
+
+<!-- ============ CASE: GODSAW ============ -->
+<section class="case" id="godsaw" data-tags="environment visdev">
+  <div class="project-meta mono" style="border:0;padding:0"><span>01</span><span>Concept Art / Narrative Writing</span><span>2025</span></div>
+  <div class="case-grid">
+    <div class="case-info">
+      <h2>GODSAW</h2>
+      <div class="body-text">
+        <p>A flooded world torn apart by natural disaster. It is finally safe enough to venture out in search of food and dry land. What caused the fall of everything? Is anyone else out there? What has the world become?</p>
+        <p>This was done as a narrative assignment to develop a game world with a story and base game mechanics and systems.</p>
+      </div>
+      <ul class="facts">
+        <li><span>Role</span><span>Concept Artist &amp; Narrative Writer</span></li>
+        <li><span>Team</span><span>2 people</span></li>
+        <li><span>Tools</span><span>Photoshop</span></li>
+        <li><span>Year</span><span>2025</span></li>
+      </ul>
+      <!-- Replace # with the path to the document, e.g. documents/godsaw.pdf -->
+      <a href="#" class="link-arrow">Read the Document ↗</a>
+    </div>
+    <div class="case-media">
+      <div class="media r-16x9" data-label="images/godsaw-1.jpg"><img src="images/godsaw-1.jpg" alt="" onerror="this.remove()"></div>
+      <div class="grid-eq">
+        <div class="media r-4x5" data-label="images/godsaw-2.jpg"><img src="images/godsaw-2.jpg" alt="" onerror="this.remove()"></div>
+        <div class="media r-4x5" data-label="images/godsaw-3.jpg"><img src="images/godsaw-3.jpg" alt="" onerror="this.remove()"></div>
+      </div>
+      <h3>Process</h3>
+      <p class="body-text">Writing up concepts and designs, and then art was created to support these concepts and make them more comprehensible.</p>
+      <div class="media r-16x9" data-label="More artwork → images/godsaw-4.jpg"><img src="images/godsaw-4.jpg" alt="" onerror="this.remove()"></div>
+      <p class="caption">Caption for this image.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CASE: OBLIVIS ============ -->
+<section class="case" id="oblivis" data-tags="environment visdev">
+  <div class="project-meta mono" style="border:0;padding:0"><span>02</span><span>World Building / Writing / Art</span><span>2025</span></div>
+  <div class="case-grid">
+    <div class="case-info">
+      <h2>OBLIVIS</h2>
+      <div class="body-text">
+        <p>A neo-noir experience set in an isolated city. Mysterious creatures have begun creeping out of the shadows and are terrorizing its citizens.</p>
+        <p>This was a narrative assignment set to develop worldbuilding and script writing.</p>
+      </div>
+      <ul class="facts">
+        <li><span>Role</span><span>World Builder, Writer, Art</span></li>
+        <li><span>Tools</span><span>Photoshop, Maya</span></li>
+        <li><span>Year</span><span>2025</span></li>
+      </ul>
+      <!-- Replace # with the path to the document, e.g. documents/oblivis.pdf -->
+      <a href="#" class="link-arrow">Read the Document ↗</a>
+    </div>
+    <div class="case-media">
+      <div class="media r-16x9" data-label="images/oblivis-1.jpg"><img src="images/oblivis-1.jpg" alt="" onerror="this.remove()"></div>
+      <div class="media r-21x9" data-label="images/oblivis-2.jpg"><img src="images/oblivis-2.jpg" alt="" onerror="this.remove()"></div>
+      <div class="grid-3">
+        <div class="media r-1x1" data-label="images/oblivis-3.jpg"><img src="images/oblivis-3.jpg" alt="" onerror="this.remove()"></div>
+        <div class="media r-1x1" data-label="images/oblivis-4.jpg"><img src="images/oblivis-4.jpg" alt="" onerror="this.remove()"></div>
+        <div class="media r-1x1" data-label="images/oblivis-5.jpg"><img src="images/oblivis-5.jpg" alt="" onerror="this.remove()"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CASE: 2SKATE ============ -->
+<section class="case" id="2skate" data-tags="design 3d">
+  <div class="project-meta mono" style="border:0;padding:0"><span>03</span><span>Art / Game Design</span><span>2026</span></div>
+  <div class="case-grid">
+    <div class="case-info">
+      <h2>2SKATE</h2>
+      <div class="body-text">
+        <p>Our game entered into the 2026 Physics Jam hosted by Free Lives. Play as a roller rink employee. Clean up, deliver food and try not to hit anyone.</p>
+      </div>
+      <ul class="facts">
+        <li><span>Role</span><span>Artist, Designer</span></li>
+        <li><span>Engine</span><span>Unity</span></li>
+        <li><span>Year</span><span>2026</span></li>
+      </ul>
+      <a href="https://cragels.itch.io/2skate" target="_blank" rel="noopener" class="link-arrow">Play on itch.io ↗</a>
+    </div>
+    <div class="case-media">
+      <div class="media r-16x9" data-label="images/2skate-1.jpg"><img src="images/2skate-1.jpg" alt="" onerror="this.remove()"></div>
+      <div class="media r-21x9" data-label="images/2skate-2.jpg"><img src="images/2skate-2.jpg" alt="" onerror="this.remove()"></div>
+      <h3>Trailer</h3>
+      <!-- YouTube embed: replace VIDEO_ID with the ID from your YouTube link -->
+      <div class="media r-16x9" data-label="YouTube embed → replace VIDEO_ID">
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="2Skate trailer" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CASE: SHOWREELS ============ -->
+<section class="case" id="showreels" data-tags="environment 3d">
+  <div class="project-meta mono" style="border:0;padding:0"><span>04</span><span>3D Modeling / Environment Art</span><span>2021 — 2026</span></div>
+  <div class="case-grid">
+    <div class="case-info">
+      <h2>Showreels</h2>
+      <div class="body-text"><p>A look at my work, then and now. Add a short note here about what each reel covers.</p></div>
+    </div>
+    <div class="case-media">
+      <h3 style="margin-top:0">2026 Showreel</h3>
+      <!-- Option A: local video file. Option B: replace the <video> with a YouTube iframe like in 2SKATE. -->
+      <div class="media r-16x9" data-label="2026 showreel → videos/showreel-2026.mp4">
+        <video src="videos/showreel-2026.mp4" controls preload="metadata" poster="images/showreel-2026.jpg" onerror="this.remove()"></video>
+      </div>
+      <h3>2021 Showreel</h3>
+      <div class="media r-16x9" data-label="2021 showreel → videos/showreel-2021.mp4">
+        <video src="videos/showreel-2021.mp4" controls preload="metadata" poster="images/showreel-2021.jpg" onerror="this.remove()"></video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="lime cta">
+  <div class="eyebrow mono"><span>→</span><span>Let's make something</span></div>
+  <h2 class="display">Have a world<br><em>in mind?</em></h2>
+  <a class="mail mono" href="mailto:devillierscleote@gmail.com">devillierscleote@gmail.com</a>
+</section>
+
+<footer class="foot mono">
+  <span>Devilliers Cloete — Game Artist &amp; Designer</span>
+  <ul><li><a href="index.html">Home</a></li><li><a href="experience.html">Experience</a></li><li><a href="about.html">About</a></li></ul>
+  <span>© <span class="year">2026</span></span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
