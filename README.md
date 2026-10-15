@@ -10,6 +10,7 @@ Four pages: `index.html` (home), `portfolio.html`, `experience.html`, `about.htm
 4. Videos: small clips can go in `videos/` (GitHub's file limit is 100 MB, so keep them well under). For anything larger, upload to YouTube and use the embed block in `portfolio.html` (replace `VIDEO_ID`).
 
 ## Things to edit
+- Put your resume PDF in `documents/` named `Devilliers-Cloete-Resume.pdf` so the About page download button works.
 - The "Read the Document" links on GODSAW and OBLIVIS in `portfolio.html` currently point to `#`. Put your PDFs in a `documents/` folder and change the `href` (e.g. `documents/godsaw.pdf`).
 - Education details on `experience.html` and the tools list are still placeholders.
 - To add a project to the portfolio page, copy one `<section class="case">…</section>` block and change the text and image names.
