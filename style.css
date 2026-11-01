@@ -88,11 +88,10 @@ section, .section { padding: clamp(64px, 10vw, 140px) var(--pad); }
 .project-foot p { font-size: 13px; color: #ffffffa0; margin-bottom: 14px; }
 .link-arrow { font-family: var(--mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; border-bottom: 1px solid var(--lime); color: var(--lime); padding-bottom: 3px; }
 .link-arrow:hover { opacity: .7; }
-.grid-2 { display: grid; grid-template-columns: 2fr 1fr; gap: 12px; margin-top: 12px; }
-.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 12px; }
-.grid-eq { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
-.grid-2 .media, .grid-3 .media, .grid-eq .media { aspect-ratio: auto; height: 100%; min-height: 200px; }
-.grid-2 .media { min-height: 320px; }
+/* Rows of images: each slot takes the shape of its own file (script.js sets
+   aspect-ratio + flex-grow), so side-by-side images share one height, uncropped. */
+.grid-2, .grid-3, .grid-eq { display: flex; gap: 12px; margin-top: 12px; }
+.grid-2 > .media, .grid-3 > .media, .grid-eq > .media { flex: 1 1 0; min-width: 0; aspect-ratio: 16/9; }
 
 /* ---------- portfolio page ---------- */
 .filters { display: flex; flex-wrap: wrap; gap: 10px; padding: 0 var(--pad) 20px; }
@@ -160,7 +159,8 @@ section, .section { padding: clamp(64px, 10vw, 140px) var(--pad); }
   .badge { display: none; }
   .project-foot, .case-grid, .two-col, .edu { grid-template-columns: 1fr; }
   .case-info { position: static; }
-  .grid-2, .grid-3, .grid-eq { grid-template-columns: 1fr; }
+  .grid-2, .grid-3, .grid-eq { flex-direction: column; }
+  .grid-2 > .media, .grid-3 > .media, .grid-eq > .media { flex: none !important; width: 100%; }
   .role { grid-template-columns: 1fr; gap: 12px; }
   .stats { grid-template-columns: 1fr 1fr; }
   .hero-meta { flex-direction: column; gap: 6px; }
