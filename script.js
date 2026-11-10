@@ -38,6 +38,7 @@ function fitMedia(box, w, h) {
 }
 document.querySelectorAll('.media').forEach(box => {
   if (box.parentElement.classList.contains('hero')) return; // hero stays full-bleed
+  if (box.closest('.game-card')) return; // game covers keep one uniform shape
   const img = box.querySelector('img');
   const vid = box.querySelector('video');
   if (img) {
