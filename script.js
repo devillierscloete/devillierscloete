@@ -26,7 +26,9 @@ function fitMedia(box, w, h) {
   box.style.flexGrow = (w / h).toFixed(4); // side-by-side images end up equal height
 }
 document.querySelectorAll('.media').forEach(box => {
-  if (box.parentElement.classList.contains('hero')) return; // hero stays full-bleed
+  // Ignore hero AND the portfolio page grids so they don't overlap
+  if (box.parentElement.classList.contains('hero') || box.closest('.case-media')) return; 
+  
   const img = box.querySelector('img');
   const vid = box.querySelector('video');
   if (img) {
