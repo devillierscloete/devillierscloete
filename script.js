@@ -23,7 +23,18 @@ buttons.forEach(btn => btn.addEventListener('click', () => {
 function fitMedia(box, w, h) {
   if (!w || !h) return;
   box.style.aspectRatio = w + ' / ' + h;
-  box.style.flexGrow = (w / h).toFixed(4); // side-by-side images end up equal height
+  box.dataset.ratio = (w / h).toFixed(4);
+  // a row of images: size the columns by shape so every image in it is the same height
+  const row = box.parentElement;
+  if (row && /(^|\s)grid-(2|3|eq)(\s|$)/.test(row.className)) {
+    const kids = [...row.children].filter(k => k.classList.contains('media'));
+    if (kids.length === row.children.length) {
+      const r = kids.map(k => parseFloat(k.dataset.ratio) || 16 / 9);
+      const sum = r.reduce((a, b) => a + b, 0);
+      // fractions are scaled to total 100 so the row always fills the full width
+      row.style.gridTemplateColumns = r.map(x => 'minmax(0, ' + ((x / sum) * 100).toFixed(3) + 'fr)').join(' ');
+    }
+  }
 }
 document.querySelectorAll('.media').forEach(box => {
   if (box.parentElement.classList.contains('hero')) return; // hero stays full-bleed
